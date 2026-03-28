@@ -1,0 +1,160 @@
+{
+  "users": [
+    {
+      "id": "user_70a3d91bbdd5",
+      "google_sub": null,
+      "email": "owner@example.com",
+      "name": "Owner",
+      "picture": null,
+      "created_at": "2026-03-28T00:46:37.091003+00:00",
+      "updated_at": "2026-03-28T00:46:37.091003+00:00"
+    },
+    {
+      "id": "user_a100f7024214",
+      "google_sub": "110572607602834503120",
+      "email": "jithinjzx@gmail.com",
+      "name": "jithin jz",
+      "picture": "https://lh3.googleusercontent.com/a/ACg8ocLISVy_Yn2d4vMvmTq536wBWRjMN9L0vbsoR_KmzfH1Z8-BplVA=s96-c",
+      "created_at": "2026-03-28T01:01:00.967648+00:00",
+      "updated_at": "2026-03-28T01:01:00.967648+00:00"
+    },
+    {
+      "id": "user_fd505d6af34e",
+      "google_sub": "102117259502941573024",
+      "email": "jzdieheart@gmail.com",
+      "name": "stanley",
+      "picture": "https://lh3.googleusercontent.com/a/ACg8ocJ27vIOPw69JS6h5YBXM-0L_kAM6I0BMhDaLPrdKeI_UpD93MZO=s96-c",
+      "created_at": "2026-03-28T01:32:46.288184+00:00",
+      "updated_at": "2026-03-28T01:51:18.120165+00:00"
+    }
+  ],
+  "bots": [
+    {
+      "id": "bot_3590cd1fbd38",
+      "owner_id": "user_70a3d91bbdd5",
+      "name": "Hiring Bot",
+      "slug": "hiring-bot",
+      "description": "Answers candidate questions",
+      "created_at": "2026-03-28T00:46:37.101149+00:00",
+      "updated_at": "2026-03-28T00:46:39.627622+00:00",
+      "public_enabled": true,
+      "theme": {
+        "botTitle": "Hiring Bot",
+        "welcomeMessage": "Hi! Ask me anything about this knowledge base.",
+        "placeholder": "Type your message...",
+        "primaryColor": "#124170",
+        "accentColor": "#c75d2c",
+        "surfaceColor": "#fffaf5",
+        "textColor": "#182033"
+      },
+      "documents": [
+        {
+          "id": "doc_43ce3cbade8c",
+          "original_name": "resume.txt",
+          "stored_name": "doc_43ce3cbade8c.txt",
+          "path": "C:\\Users\\Jithi\\Desktop\\Resume RAG\\backend\\data\\platform\\bots\\bot_3590cd1fbd38\\documents\\doc_43ce3cbade8c.txt",
+          "size": 3223,
+          "content_type": "text/plain",
+          "uploaded_at": "2026-03-28T00:46:37.111721+00:00"
+        }
+      ]
+    },
+    {
+      "id": "bot_2992e6349e0e",
+      "owner_id": "user_a100f7024214",
+      "name": "resume",
+      "slug": "resume",
+      "description": "resume",
+      "created_at": "2026-03-28T01:01:24.404835+00:00",
+      "updated_at": "2026-03-28T01:03:43.436899+00:00",
+      "public_enabled": true,
+      "theme": {
+        "botTitle": "resume",
+        "welcomeMessage": "Hi! Ask me anything about this knowledge base.",
+        "placeholder": "Type your message...",
+        "primaryColor": "#0f4071",
+        "accentColor": "#733112",
+        "surfaceColor": "#cb7015",
+        "textColor": "#9b9da1"
+      },
+      "documents": [
+        {
+          "id": "doc_a86f5acf3e7b",
+          "original_name": "jithin.resume.pdf",
+          "stored_name": "doc_a86f5acf3e7b.pdf",
+          "path": "/app/data/platform/bots/bot_2992e6349e0e/documents/doc_a86f5acf3e7b.pdf",
+          "size": 83950,
+          "content_type": "application/pdf",
+          "uploaded_at": "2026-03-28T01:01:41.949975+00:00"
+        }
+      ]
+    },
+    {
+      "id": "bot_53ea8ffed964",
+      "owner_id": "user_fd505d6af34e",
+      "name": "resume",
+      "slug": "resume-2",
+      "description": "resume",
+      "created_at": "2026-03-28T01:34:13.631065+00:00",
+      "updated_at": "2026-03-28T02:22:42.410174+00:00",
+      "public_enabled": true,
+      "theme": {
+        "botTitle": "jithin",
+        "welcomeMessage": "Hi! Ask me anything about this knowledge base.",
+        "placeholder": "Type your message...",
+        "primaryColor": "#8291a1",
+        "accentColor": "#914527",
+        "surfaceColor": "#fffaf5",
+        "textColor": "#182033"
+      },
+      "documents": [
+        {
+          "id": "doc_3d2c81ccec7b",
+          "original_name": "jithin.resume.pdf",
+          "stored_name": "doc_3d2c81ccec7b.pdf",
+          "path": "/app/data/platform/bots/bot_53ea8ffed964/documents/doc_3d2c81ccec7b.pdf",
+          "size": 83950,
+          "content_type": "application/pdf",
+          "uploaded_at": "2026-03-28T01:36:18.194758+00:00"
+        }
+      ]
+    },
+    {
+      "id": "bot_2269fa39bd7a",
+      "owner_id": "user_fd505d6af34e",
+      "name": "portfolio",
+      "slug": "portfolio",
+      "description": "docs",
+      "created_at": "2026-03-28T01:43:21.938927+00:00",
+      "updated_at": "2026-03-28T01:58:57.076977+00:00",
+      "public_enabled": false,
+      "theme": {
+        "botTitle": "portfolio",
+        "welcomeMessage": "Hi! Ask me anything about this knowledge base.",
+        "placeholder": "Type your message...",
+        "primaryColor": "#124170",
+        "accentColor": "#c75d2c",
+        "surfaceColor": "#fffaf5",
+        "textColor": "#182033"
+      },
+      "documents": []
+    }
+  ],
+  "sessions": [
+    {
+      "token": "kEBKdyniQqyuUOqJOXhyRqPoA7IIB-TNqejrO4VzHdw",
+      "user_id": "user_70a3d91bbdd5",
+      "created_at": "2026-03-28T00:46:37.091003+00:00"
+    },
+    {
+      "token": "m5-GJYgMBSxUeHzRzfGNShlQhVo1OxrKvITos3c6sH8",
+      "user_id": "user_a100f7024214",
+      "created_at": "2026-03-28T01:01:00.967887+00:00"
+    },
+    {
+      "token": "kd6tHY0wM82OzDzVFQ9MNAhB-V2DbI2ZC-hNH5RaedM",
+      "user_id": "user_fd505d6af34e",
+      "created_at": "2026-03-28T01:51:18.125277+00:00"
+    }
+  ]
+}
