@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --font-display: "Manrope", "system-ui", "sans-serif";
+  --font-mono: "Fira Code", "monospace";
+
+  --color-obsidian-bg: #10141a;
+  --color-obsidian-surface: #181c22;
+  --color-obsidian-surface-high: #262a31;
+  --color-obsidian-surface-highest: #31353c;
+  
+  --color-obsidian-primary: #cdbdff;
+  --color-obsidian-primary-dark: #5d21df;
+  --color-obsidian-secondary: #7dffa2;
+  --color-obsidian-accent: #81cfff;
+  
+  --color-obsidian-text: #dfe2eb;
+  --color-obsidian-text-dim: #948da2;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian-bg text-obsidian-text font-sans antialiased selection:bg-obsidian-primary/30;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-obsidian-surface/60 backdrop-blur-xl border border-white/5;
+  }
+  
+  .glass-high {
+    @apply bg-obsidian-surface-high/80 backdrop-blur-2xl border border-white/10;
+  }
+
+  .neon-glow-primary {
+    box-shadow: 0 0 20px rgba(205, 189, 255, 0.15);
+  }
+
+  .neon-glow-secondary {
+    box-shadow: 0 0 20px rgba(125, 255, 162, 0.15);
+  }
+  
+  .btn-obsidian-primary {
+    @apply bg-obsidian-primary-dark hover:bg-obsidian-primary-dark/90 text-white font-bold rounded-xl transition-all active:scale-95 shadow-lg shadow-obsidian-primary-dark/20;
+  }
+
+  .btn-obsidian-secondary {
+    @apply bg-white/5 hover:bg-white/10 text-obsidian-text font-bold rounded-xl transition-all border border-white/10 backdrop-blur-md;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-obsidian-surface-highest/50 rounded-full hover:bg-obsidian-surface-highest;
+}

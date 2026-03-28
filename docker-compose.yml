@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: 
+      context: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app  # Sync code for hot-reloading
+    env_file:
+      - ./backend/.env  # Make sure environment keys are passed to container
+    restart: always
+
+

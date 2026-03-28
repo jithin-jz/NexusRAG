@@ -1,0 +1,87 @@
+JITHINLAL K R
+Kerala, India
+Email: jithinjzx@gmail.com
+Phone: +91 9562449137
+LinkedIn: https://linkedin.com/in/jithin-kr
+Portfolio: https://jithin.site
+
+--------------------------------------------------
+SUMMARY
+--------------------------------------------------
+Full-stack developer focused on backend engineering with Python, Django REST Framework, and FastAPI. Experienced in building scalable APIs, microservices, and real-time systems. Strong in deploying production systems using Docker, Kubernetes, and AWS with CI/CD automation.
+
+--------------------------------------------------
+SKILLS
+--------------------------------------------------
+Languages:
+- Python, JavaScript, SQL
+
+Backend:
+- Django, Django REST Framework, FastAPI
+- Celery, Redis, WebSockets
+
+Frontend:
+- React, Zustand, Tailwind CSS, HTML, CSS
+
+Databases:
+- PostgreSQL, MySQL, SQLite
+
+Cloud & DevOps:
+- Docker, Kubernetes (K3s), AWS EC2, Nginx
+- Git, GitHub, GitHub Actions
+
+--------------------------------------------------
+EXPERIENCE
+--------------------------------------------------
+Full-Stack Developer Intern (Python + React)
+Bridgeon Solutions LLP | April 2025 – Present
+
+- Built and maintained REST APIs using Django, DRF, and FastAPI
+- Developed responsive frontend systems using React and Tailwind CSS
+- Implemented async task processing with Celery and Redis
+- Designed and optimized PostgreSQL and MySQL databases
+- Deployed applications using Docker and Kubernetes on AWS EC2
+- Managed CI/CD pipelines using GitHub Actions
+
+--------------------------------------------------
+PROJECTS
+--------------------------------------------------
+
+Clash of Code – Gamified Coding Platform (Microservices)
+https://clashcode.jithin.site
+
+- Designed microservice architecture using FastAPI and Django
+- Built real-time systems using WebSockets (chat, notifications, collaboration)
+- Integrated AI assistance using LangChain, ChromaDB, and LLM pipelines
+- Developed frontend with React and real-time updates
+- Deployed using Docker, Kubernetes (K3s), and Traefik with CI/CD
+
+Ecommerce Platform
+https://souled.jithin.site
+
+- Built scalable REST APIs using Django REST Framework
+- Implemented Stripe payments with secure webhook handling
+- Integrated Cloudinary for media optimization and delivery
+- Developed frontend using React and Zustand
+- Deployed on AWS EC2 with Nginx and CI/CD pipelines
+
+DevScore – AI Developer Evaluation Platform
+https://devscores.vercel.app
+
+- Built AI system to evaluate GitHub repositories and developer quality
+- Implemented analysis pipeline using Django and LLM (Llama 3.3 via Groq)
+- Developed real-time dashboard with React, WebSockets, and Recharts
+- Integrated GitHub OAuth authentication
+- Designed scalable backend with PostgreSQL and Neon
+
+--------------------------------------------------
+CERTIFICATIONS
+--------------------------------------------------
+- Python Full Stack Development – CodEdu (2024)
+- DRF ORM Query Fundamentals – Udemy (2025)
+
+--------------------------------------------------
+EDUCATION
+--------------------------------------------------
+Bachelor of Arts in English
+University of Calicut | 2024
