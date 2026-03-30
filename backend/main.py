@@ -174,7 +174,10 @@ def auth_me(current_user=Depends(get_current_user)):
 
 
 @app.post("/api/auth/logout")
-def auth_logout(current_user=Depends(get_current_user), authorization: Annotated[str | None, Header()] = None):
+def auth_logout(
+    current_user=Depends(get_current_user),
+    authorization: Annotated[str | None, Header()] = None,
+):
     token = (authorization or "").removeprefix("Bearer ").strip()
     logout_session(token)
     return {"message": "Logged out."}
@@ -191,7 +194,9 @@ def list_bots(current_user=Depends(get_current_user)):
 @app.post("/api/bots")
 def create_bot(payload: CreateBotRequest, current_user=Depends(get_current_user)):
     try:
-        return create_bot_for_user(current_user["id"], payload.name, payload.description)
+        return create_bot_for_user(
+            current_user["id"], payload.name, payload.description
+        )
     except Exception as exc:
         raise _http_error_from_exception(exc) from exc
 
@@ -205,7 +210,9 @@ def get_bot(bot_id: str, current_user=Depends(get_current_user)):
 
 
 @app.patch("/api/bots/{bot_id}")
-def update_bot(bot_id: str, payload: UpdateBotRequest, current_user=Depends(get_current_user)):
+def update_bot(
+    bot_id: str, payload: UpdateBotRequest, current_user=Depends(get_current_user)
+):
     try:
         return update_bot_for_user(
             current_user["id"],
@@ -219,9 +226,13 @@ def update_bot(bot_id: str, payload: UpdateBotRequest, current_user=Depends(get_
 
 
 @app.patch("/api/bots/{bot_id}/theme")
-def update_bot_theme(bot_id: str, payload: ThemeUpdateRequest, current_user=Depends(get_current_user)):
+def update_bot_theme(
+    bot_id: str, payload: ThemeUpdateRequest, current_user=Depends(get_current_user)
+):
     try:
-        return update_bot_theme_for_user(current_user["id"], bot_id, payload.model_dump())
+        return update_bot_theme_for_user(
+            current_user["id"], bot_id, payload.model_dump()
+        )
     except Exception as exc:
         raise _http_error_from_exception(exc) from exc
 
@@ -261,7 +272,9 @@ def chat_bot(bot_id: str, payload: ChatRequest, current_user=Depends(get_current
 
 
 @app.get("/api/bots/{bot_id}/integration")
-def bot_integration(bot_id: str, request: Request, current_user=Depends(get_current_user)):
+def bot_integration(
+    bot_id: str, request: Request, current_user=Depends(get_current_user)
+):
     try:
         return generate_bot_integration(current_user["id"], bot_id, _base_url(request))
     except Exception as exc:

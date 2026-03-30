@@ -25,7 +25,7 @@
       "name": "stanley",
       "picture": "https://lh3.googleusercontent.com/a/ACg8ocJ27vIOPw69JS6h5YBXM-0L_kAM6I0BMhDaLPrdKeI_UpD93MZO=s96-c",
       "created_at": "2026-03-28T01:32:46.288184+00:00",
-      "updated_at": "2026-03-28T01:51:18.120165+00:00"
+      "updated_at": "2026-03-30T09:42:31.345701+00:00"
     }
   ],
   "bots": [
@@ -96,7 +96,7 @@
       "slug": "resume-2",
       "description": "resume",
       "created_at": "2026-03-28T01:34:13.631065+00:00",
-      "updated_at": "2026-03-28T02:22:42.410174+00:00",
+      "updated_at": "2026-03-30T10:09:17.353088+00:00",
       "public_enabled": true,
       "theme": {
         "botTitle": "jithin",
@@ -126,7 +126,7 @@
       "slug": "portfolio",
       "description": "docs",
       "created_at": "2026-03-28T01:43:21.938927+00:00",
-      "updated_at": "2026-03-28T01:58:57.076977+00:00",
+      "updated_at": "2026-03-30T10:12:16.742508+00:00",
       "public_enabled": false,
       "theme": {
         "botTitle": "portfolio",
@@ -137,7 +137,17 @@
         "surfaceColor": "#fffaf5",
         "textColor": "#182033"
       },
-      "documents": []
+      "documents": [
+        {
+          "id": "doc_835788dd91ae",
+          "original_name": "aws.guide.txt",
+          "stored_name": "doc_835788dd91ae.txt",
+          "path": "/app/data/platform/bots/bot_2269fa39bd7a/documents/doc_835788dd91ae.txt",
+          "size": 31752,
+          "content_type": "text/plain",
+          "uploaded_at": "2026-03-30T10:10:56.696257+00:00"
+        }
+      ]
     }
   ],
   "sessions": [
@@ -152,9 +162,9 @@
       "created_at": "2026-03-28T01:01:00.967887+00:00"
     },
     {
-      "token": "kd6tHY0wM82OzDzVFQ9MNAhB-V2DbI2ZC-hNH5RaedM",
+      "token": "mvDlwh_zCi57iAjXnq16KAh-18AQiesmKP8qe5H2p-Q",
       "user_id": "user_fd505d6af34e",
-      "created_at": "2026-03-28T01:51:18.125277+00:00"
+      "created_at": "2026-03-30T09:42:31.345740+00:00"
     }
   ]
 }

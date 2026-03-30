@@ -224,13 +224,19 @@ def _bot_owner_payload(bot: dict[str, Any]) -> dict[str, Any]:
             }
             for item in bot.get("documents", [])
         ],
-        "vector_ready": marker.exists() and marker.read_text(encoding="utf-8") == signature and bool(signature),
+        "vector_ready": marker.exists()
+        and marker.read_text(encoding="utf-8") == signature
+        and bool(signature),
     }
 
 
-def _create_session_for_user(state: dict[str, Any], user: dict[str, Any]) -> dict[str, Any]:
+def _create_session_for_user(
+    state: dict[str, Any], user: dict[str, Any]
+) -> dict[str, Any]:
     token = secrets.token_urlsafe(32)
-    state["sessions"] = [item for item in state["sessions"] if item["user_id"] != user["id"]]
+    state["sessions"] = [
+        item for item in state["sessions"] if item["user_id"] != user["id"]
+    ]
     session = {"token": token, "user_id": user["id"], "created_at": _now_iso()}
     state["sessions"].append(session)
     _save_state(state)
@@ -239,7 +245,9 @@ def _create_session_for_user(state: dict[str, Any], user: dict[str, Any]) -> dic
 
 def get_user_for_session(session_token: str) -> dict[str, Any]:
     state = _load_state()
-    session = next((item for item in state["sessions"] if item["token"] == session_token), None)
+    session = next(
+        (item for item in state["sessions"] if item["token"] == session_token), None
+    )
     if not session:
         raise PermissionError("Invalid or expired session.")
     user = _find_user(state, session["user_id"])
@@ -254,7 +262,9 @@ def get_user_for_session(session_token: str) -> dict[str, Any]:
 
 def logout_session(session_token: str) -> None:
     state = _load_state()
-    state["sessions"] = [item for item in state["sessions"] if item["token"] != session_token]
+    state["sessions"] = [
+        item for item in state["sessions"] if item["token"] != session_token
+    ]
     _save_state(state)
 
 
@@ -276,7 +286,9 @@ def authenticate_google_credential(credential: str) -> dict[str, Any]:
         raise ValueError("Google account details were not available.")
 
     state = _load_state()
-    user = next((item for item in state["users"] if item.get("google_sub") == google_sub), None)
+    user = next(
+        (item for item in state["users"] if item.get("google_sub") == google_sub), None
+    )
     now = _now_iso()
 
     if not user:
@@ -350,10 +362,14 @@ def create_dev_session(email: str, name: str | None = None) -> dict[str, Any]:
 def list_bots_for_user(user_id: str) -> list[dict[str, Any]]:
     state = _load_state()
     _find_user(state, user_id)
-    return [_bot_owner_payload(bot) for bot in state["bots"] if bot["owner_id"] == user_id]
+    return [
+        _bot_owner_payload(bot) for bot in state["bots"] if bot["owner_id"] == user_id
+    ]
 
 
-def create_bot_for_user(user_id: str, name: str, description: str = "") -> dict[str, Any]:
+def create_bot_for_user(
+    user_id: str, name: str, description: str = ""
+) -> dict[str, Any]:
     state = _load_state()
     _find_user(state, user_id)
 
@@ -422,7 +438,9 @@ def update_bot_for_user(
     return _bot_owner_payload(bot)
 
 
-def update_bot_theme_for_user(user_id: str, bot_id: str, theme_patch: dict[str, Any]) -> dict[str, Any]:
+def update_bot_theme_for_user(
+    user_id: str, bot_id: str, theme_patch: dict[str, Any]
+) -> dict[str, Any]:
     state = _load_state()
     bot = _get_user_bot(state, user_id, bot_id)
     cleaned = _sanitize_theme_patch(theme_patch)
@@ -499,7 +517,9 @@ def build_bot_vector_db(user_id: str, bot_id: str) -> str:
     bot = _get_user_bot(state, user_id, bot_id)
 
     if not bot["documents"]:
-        raise ValueError("Upload at least one document before building the bot knowledge base.")
+        raise ValueError(
+            "Upload at least one document before building the bot knowledge base."
+        )
 
     documents = _load_documents_for_bot(bot)
     if not documents:
@@ -584,7 +604,9 @@ def query_public_bot(bot_id: str, question: str) -> dict[str, Any]:
     return {"reply": _run_bot_query(bot, question), "bot": _bot_public_payload(bot)}
 
 
-def generate_bot_integration(user_id: str, bot_id: str, base_url: str) -> dict[str, Any]:
+def generate_bot_integration(
+    user_id: str, bot_id: str, base_url: str
+) -> dict[str, Any]:
     state = _load_state()
     bot = _get_user_bot(state, user_id, bot_id)
     base_url = base_url.rstrip("/")
